@@ -4,12 +4,6 @@
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Architecture](#architecture)
-- [Microservices](#microservices)
-    - [Beneficiary Service](#beneficiary-service)
-    - [Transfer Service](#transfer-service)
-    - [Gateway Service](#gateway-service)
-    - [Discovery Service](#discovery-service)
-    - [Config Service](#config-service)
 - [Screen Shots](#screen-shots)
 
 ## Introduction
