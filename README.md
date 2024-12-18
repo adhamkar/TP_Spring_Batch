@@ -5,6 +5,7 @@
 - [Technologies Used](#technologies-used)
 - [Architecture](#architecture)
 - [Screen Shots](#screen-shots)
+- [Execution](#execution)
 
 ## Introduction
 This TP is a proof of concept for Orders Transformation. It is built using a spring batch and hsql to get used to spring batch logic and process
@@ -56,3 +57,7 @@ The application follows a Spring Batch architecture with the following component
 
 ### Scheduler
 ![img_7.png](img_7.png)
+
+## Execution
+
+![img_9.png](img_9.png)
