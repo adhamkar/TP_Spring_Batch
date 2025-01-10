@@ -16,8 +16,8 @@ public class HospitaltemProcessor implements ItemProcessor<Hospital,Hospital> {
     @Override
     public Hospital process(Hospital hospitalItem) throws Exception {
         if (hospitalItem.dateSortie() == null) {
-            System.out.println("Date de Sortie null à ignorer :"+hospitalItem.dateSortie()+" Nom : "+hospitalItem.nom());
-            return null;
+            System.out.println("Ignorer l'enregistrement : Date de sortie absente pour " + hospitalItem.nom());
+            return null; // Ignorer cet enregistrement
         }
         LocalDate dateAdmission = LocalDate.parse(hospitalItem.dateAdmission());
         LocalDate dateSortie = LocalDate.parse(hospitalItem.dateSortie());

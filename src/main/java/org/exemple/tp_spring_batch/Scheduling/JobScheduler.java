@@ -12,20 +12,16 @@ import org.springframework.stereotype.Component;
 public class JobScheduler {
     @Autowired
     private JobLauncher jobLauncher;
+
     @Autowired
-    private Job processOrderJob;
+    private Job importHospitalJob;
 
-    @Scheduled(fixedRate = 5000)
-    public void runJob(){
-        try {
-            JobParameters parameters = new JobParametersBuilder()
-                    .addLong("start Time",System.currentTimeMillis())
-                    .toJobParameters();
-            jobLauncher.run(processOrderJob,parameters);
-            System.out.println("Job finished");
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    @Scheduled(cron = "0 0 0 * * ?")
+    public void runJob() throws Exception {
+        JobParameters jobParameters = new JobParametersBuilder()
+                .addLong("time", System.currentTimeMillis())
+                .toJobParameters();
 
+        jobLauncher.run(importHospitalJob, jobParameters);
     }
 }
